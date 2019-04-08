@@ -1,0 +1,39 @@
+<div id="app" class="ui container" style="padding-bottom: 10px;">
+    <div class="ui secondary three item labeled icon menu" id="main-menu" style="margin-bottom:0px;padding-top: 10px">
+        <a class="item" id="triggers-menu-item">
+            <i class="sitemap icon"></i>
+            Scene
+        </a>
+    </div>
+
+    <div class="ui divider" style="margin-top:0px;"></div>
+
+    <h3 id="name-field"></h3>
+
+    <div id="value-grid">
+        <div class="ui placeholder segment" style="min-height: 10rem">
+            <div class="ui positive button" id="add-value-btn" tabindex="0"><i class="add icon"></i>Add new value</div>
+        </div>
+    </div>
+</div>
+
+<div id="add-value-modal" class="ui small modal">
+    <div class="header">
+        Add Value
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Device</label>
+                <select id="value-select"></select>
+            </div>
+            <div id="value-field" class="field">
+
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui deny button">Cancel</div>
+        <div class="ui green ok button">Add</div>
+    </div>
+</div>

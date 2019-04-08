@@ -1,0 +1,19 @@
+/* #value-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-row-gap: 10px;
+    align-items: start;
+}
+
+@media screen and (max-width: 992px) {
+    #value-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #value-grid {
+        grid-template-columns: 1fr;
+    }
+} */

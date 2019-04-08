@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartHome</title>
+    <link rel="stylesheet" type="text/css" href="lib/semantic-ui-css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/semantic-ui-css/components/menu.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/semantic-ui-css/components/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    {{#each styles}}
+    <link rel="stylesheet" type="text/css" href="{{this}}">
+    {{/each}}
+</head>
+<body>
+
+    {{{body}}}
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/semantic-ui-css/semantic.min.js"></script>
+    <script src="lib/semantic-ui-css/components/dropdown.min.js"></script>
+    <script src="lib/socket.io-client/dist/socket.io.js"></script>
+    <script src="lib/moment/min/moment-with-locales.min.js"></script>
+    <script src="lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+    
+    {{#each scripts}}
+    <script src="{{this}}"></script>
+    {{/each}}
+</body>
+</html>

@@ -1,0 +1,58 @@
+#device-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-row-gap: 10px;
+}
+
+#trigger-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-row-gap: 10px;
+}
+
+#scene-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-row-gap: 10px;
+}
+
+#add-button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+@media screen and (max-width: 992px) {
+    #device-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #trigger-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #scene-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #device-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #trigger-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #scene-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#device-grid .ui.segment {
+    margin: unset;
+}

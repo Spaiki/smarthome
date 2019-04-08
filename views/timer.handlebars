@@ -1,0 +1,67 @@
+<div id="app" class="ui container" style="padding-bottom: 10px;">
+
+    <div class="ui secondary three item labeled icon menu" id="main-menu" style="margin-bottom:0px;padding-top: 10px">
+        <a class="item" id="triggers-menu-item">
+            <i class="clock icon"></i>
+            Controller
+        </a>
+    </div>
+
+    <div class="ui divider" style="margin-top:0px;"></div>
+
+    <div id="device-panel">
+        <div class="ui form">
+
+            <div class="field">
+                <label>Name</label>
+                <input type="text" id="name-field" value="{{timer.name}}">
+            </div>
+
+            <div class="field">
+                <label>Time Of Day</label>
+                <div class="two fields">
+                    <div class="field">
+                        <div id="hour-field" class="ui selection dropdown">
+                            <input type="hidden" name="hour" value="{{timer.hour}}">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Select hour</div>
+                            <div class="menu">
+                            {{#each hours}}
+                                <div class="item" data-value="{{value}}">{{name}}</div>
+                            {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div id="minute-field" class="ui selection dropdown">
+                            <input type="hidden" name="minute" value="{{timer.minute}}">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Select minute</div>
+                            <div class="menu">
+                            {{#each minutes}}
+                                <div class="item" data-value="{{value}}">{{name}}</div>
+                            {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Scene</label>
+                <div id="scene-field" class="ui selection dropdown">
+                    <input type="hidden" name="scene" value="{{timer.scene_id}}">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select scene</div>
+                    <div class="menu">
+                    {{#each scenes}}
+                        <div class="item" data-value="{{value}}">{{name}}</div>
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <button id="save-button" class="ui button" type="button">Save</button>
+        </div>
+    </div>
+</div>

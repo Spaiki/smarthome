@@ -1,0 +1,115 @@
+<div id="app" class="ui container">
+    <div class="ui secondary three item labeled icon menu" id="main-menu" style="margin-bottom:0px;padding-top: 10px">
+        <a class="active item" id="devices-menu-item">
+            <i class="plug icon"></i>
+            Devices
+        </a>
+        <a class="item" id="scene-menu-item">
+            <i class="sitemap icon"></i>
+            Scenes
+        </a>
+        <a class="item" id="triggers-menu-item">
+            <i class="clock icon"></i>
+            Controllers
+        </a>
+        
+    </div>
+
+    <div class="ui divider" style="margin-top:0px;"></div>
+
+    <div id="device-panel">
+        <div id="device-grid">
+            <div class="ui placeholder segment" style="min-height: 10rem;margin: 0px;">
+                <div class="ui positive button" id="add-new-device-btn" tabindex="0"><i class="add icon"></i>Add new device</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene-panel" hidden>
+        <div id="scene-grid">
+            <div class="ui placeholder segment" style="min-height: 10rem;margin: 0px;">
+                <button type="button" class="ui positive button" id="add-new-scene-btn" tabindex="0"><i class="add icon"></i>Add new scene</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="trigger-panel" hidden>
+        <div id="trigger-grid">
+            <div class="ui placeholder segment" style="min-height: 10rem;margin: 0px;">
+                <button type="button" class="ui positive button" id="add-controller-btn" tabindex="0"><i class="add icon"></i>Add new controller</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="device-template">
+    <div name="main panel" class="ui card" style="width: unset;margin: 0px;">
+        <div class="content">
+            <a class="header"></a>
+            <div class="meta"></div>
+            <div class="description"></div>
+        </div>
+        <div class="extra content">
+            <div name="switch controll" class="right floated">
+                <button name="switch controll button" class="ui circular small power icon button"><i class="power icon"></i></button>
+            </div>
+            <a class="ui primary small button edit-link"><i class="edit icon"></i>Open</a>
+        </div>
+    </div>
+    <div name="placeholder panel" class="ui card" style="width: unset;margin: 0px;">
+        <div class="content">
+            <div class="ui placeholder">
+                <div class="header">
+                    <div class="long line"></div>
+                    <div class="short line"></div>
+                    <div class="medium line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="extra content">
+            <button class="ui disabled primary small button"><i class="edit icon"></i>Open</button>
+        </div>
+    </div>
+</template>
+
+<div id="create-scene-modal" class="ui small modal">
+    <div class="header">
+        Create Scene
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Name</label>
+                <input id="scene-label" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui deny button">Cancel</div>
+        <div class="ui green ok button">Create</div>
+    </div>
+</div>
+
+<div id="create-controller-modal" class="ui small modal">
+    <div class="header">
+        Create Scene
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Name</label>
+                <input id="controller-name" type="text">
+            </div>
+            <div class="field">
+                <label>Type</label>
+                <select id="controller-type">
+                    <option selected value="timer">Timer</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui deny button">Cancel</div>
+        <div class="ui green ok button">Create</div>
+    </div>
+</div>
